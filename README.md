@@ -10,44 +10,54 @@ Cork is designed with the philosophy that you, the user, don't know and don't ca
 Cork was developed by Gilbert Bernstein, a computer scientist who has worked on robust geometric intersections in various projects since 2007.  He's reasonably confident he knows what he's doing. =D
 
 
+**_Obsolete:_**  
+> Installation
+> ============
+> 
+> Dependencies (Mac/Linux)
+> ------------
+> 
+> In order to build Cork on Mac or Linux, you will need Clang 3.1+ and GMP (GNU Multi-Precision arithmetic library).  Eventually, Cork will support GCC.  If you would like more information, or have special system requirements, please e-mail me: I'm much more likely to extend support to a platform if I receive requests.
+> 
+> Mac
+> ---
+> 
+> On OS X 10.8, Clang 3.1+ is the default compiler.  If you are using the Homebrew package manager, I recommend installing GMP that way.
+> 
+> Linux
+> -----
+> 
+> Clang/LLVM 3.1 and GMP can be installed via your package manager.
+> 
+> 
+> Mac/Linux
+> ----
+> 
+> To build the project, type
+> 
+>     make
+> 
+> that's it.
+> 
+> 
+> If the build system is unable to find your GMP installation, please edit the paths in file makeConstants.  In general, the project uses a basic makefile.  In the event that you have to do something more complicated to get the library to compile, or if you are unable to get it to compile, please e-mail me or open an issue on GitHub.  Doing so is much more effective than cursing at your computer, and will save other users trouble in the future.
+> 
+> 
+> Windows
+> ----
+> 
+> Cork uses C++11, so you will need the most recent compiler; Visual Studio 2012 or higher please.  You will also need to install the MPIR arithmetic library into your Visual Studio environment.
+> 
+> Once this is done, you can use the solution and project files in the /win/ subdirectory to build the demo program.  The solution/project is not currently configured to build a DLL.  Please bug me if this is an issue for you.
+
 Installation
 ============
 
-Dependencies (Mac/Linux)
-------------
+Build the library and executable using cmake. For example
 
-In order to build Cork on Mac or Linux, you will need Clang 3.1+ and GMP (GNU Multi-Precision arithmetic library).  Eventually, Cork will support GCC.  If you would like more information, or have special system requirements, please e-mail me: I'm much more likely to extend support to a platform if I receive requests.
-
-Mac
----
-
-On OS X 10.8, Clang 3.1+ is the default compiler.  If you are using the Homebrew package manager, I recommend installing GMP that way.
-
-Linux
------
-
-Clang/LLVM 3.1 and GMP can be installed via your package manager.
-
-
-Mac/Linux
-----
-
-To build the project, type
-
+    mkdir build
+    cmake ..
     make
-
-that's it.
-
-
-If the build system is unable to find your GMP installation, please edit the paths in file makeConstants.  In general, the project uses a basic makefile.  In the event that you have to do something more complicated to get the library to compile, or if you are unable to get it to compile, please e-mail me or open an issue on GitHub.  Doing so is much more effective than cursing at your computer, and will save other users trouble in the future.
-
-
-Windows
-----
-
-Cork uses C++11, so you will need the most recent compiler; Visual Studio 2012 or higher please.  You will also need to install the MPIR arithmetic library into your Visual Studio environment.
-
-Once this is done, you can use the solution and project files in the /win/ subdirectory to build the demo program.  The solution/project is not currently configured to build a DLL.  Please bug me if this is an issue for you.
 
 
 Licensing
