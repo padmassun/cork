@@ -24,6 +24,11 @@ set(INCLUDEDIRS
   src/rawmesh/
   src/util/
 )
+
+if(UNIX)
+    target_compile_options(cork PRIVATE -fPIC)
+endif(UNIX)
+
 target_include_directories(cork PRIVATE ${INCLUDEDIRS})
 target_include_directories(cork-bin PRIVATE ${INCLUDEDIRS})
 SET_TARGET_PROPERTIES(cork-bin PROPERTIES OUTPUT_NAME cork)
