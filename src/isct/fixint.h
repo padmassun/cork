@@ -45,6 +45,7 @@
 
 
 
+#include <cstddef>
 #ifdef _WIN32
 #include <mpir.h>
 #else
