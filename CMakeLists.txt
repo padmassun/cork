@@ -34,7 +34,7 @@ target_include_directories(cork-bin PRIVATE ${INCLUDEDIRS})
 SET_TARGET_PROPERTIES(cork-bin PROPERTIES OUTPUT_NAME cork)
 find_package(GMP REQUIRED)
 include_directories(${GMP_INCLUDES})
-target_link_libraries(cork-bin PRIVATE cork gmp)
+target_link_libraries(cork-bin PRIVATE cork ${GMP_LIBRARIES})
 target_compile_definitions(cork PRIVATE 
   -DNO_TIMER -DREDUCED -DCDT_ONLY -DTRILIBRARY -DANSI_DECLARATORS )
 
