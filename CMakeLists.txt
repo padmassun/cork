@@ -36,7 +36,7 @@ find_package(GMP REQUIRED)
 include_directories(${GMP_INCLUDES})
 target_link_libraries(cork-bin PRIVATE cork ${GMP_LIBRARIES})
 target_compile_definitions(cork PRIVATE 
-  -DNO_TIMER -DREDUCED -DCDT_ONLY -DTRILIBRARY -DANSI_DECLARATORS )
+  -DNO_TIMER -DREDUCED -DTRILIBRARY -DANSI_DECLARATORS )
 
 INSTALL(TARGETS cork
     LIBRARY DESTINATION lib
