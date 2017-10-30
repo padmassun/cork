@@ -26,7 +26,7 @@ set(INCLUDEDIRS
 )
 
 if(UNIX)
-    target_compile_options(cork PRIVATE -fPIC)
+    target_compile_options(cork PRIVATE -fPIC -fvisibility=hidden)
 endif(UNIX)
 
 target_include_directories(cork PRIVATE ${INCLUDEDIRS})
