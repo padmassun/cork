@@ -25,20 +25,11 @@
 // +-------------------------------------------------------------------------
 #pragma once
 
-#undef __STRICT_ANSI__
-#define _USE_MATH_DEFINES
 #include <cmath>
-
-#ifndef M_PI
-    #define M_PI 3.14159265358979323846
-#endif
-
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
 #include <iostream>
-#include <sys/time.h>
-#include <unistd.h>
 
 #ifndef uint
 typedef unsigned int uint;
@@ -53,6 +44,10 @@ typedef unsigned char byte;
 
 // error log -- silent; will not stop program
 std::ostream &err();
+
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
 
 #ifndef ENSURE
 #define ENSURE(STATEMENT) { \
